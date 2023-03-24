@@ -2,7 +2,136 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adef93fe-0bcd-4002-b417-0c4ad7280034" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/Routes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/SmartConnect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/class-use/Routes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/class-use/SmartConnect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/SessionExpiryHook.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/SmartAPIRequestHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/SmartAPIResponseHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/class-use/SessionExpiryHook.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/class-use/SmartAPIRequestHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/class-use/SmartAPIResponseHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/DataException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/GeneralException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/InputException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/NetworkException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/OrderException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/PermissionException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/SmartAPIException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/TokenException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/class-use/DataException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/class-use/GeneralException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/class-use/InputException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/class-use/NetworkException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/class-use/OrderException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/class-use/PermissionException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/class-use/SmartAPIException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/class-use/TokenException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/exceptions/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/http/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/Depth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/Holdings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/Order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/OrderParams.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/Position.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/Profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/Tick.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/TokenSet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/Trade.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/User.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/class-use/Depth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/class-use/Holdings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/class-use/Order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/class-use/OrderParams.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/class-use/Position.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/class-use/Profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/class-use/Tick.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/class-use/TokenSet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/class-use/Trade.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/class-use/User.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/models/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/sample/Examples.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/sample/Test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/sample/WSCodeTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/sample/class-use/Examples.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/sample/class-use/Test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/sample/class-use/WSCodeTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/sample/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/sample/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/sample/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/sample/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/OnConnect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/OnDisconnect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/OnError.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/OnTicks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/SmartAPITicker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/class-use/OnConnect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/class-use/OnDisconnect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/class-use/OnError.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/class-use/OnTicks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/class-use/SmartAPITicker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/ticker/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/utils/Constants.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/utils/NaiveSSLContext.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/utils/class-use/Constants.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/utils/class-use/NaiveSSLContext.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/utils/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/utils/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/utils/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/com/angelbroking/smartapi/utils/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-17.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-19.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-20.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-21.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/overview-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/stylesheet.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +166,11 @@
     "settings.editor.selected.configurable": "MTConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -47,5 +181,16 @@
       <updated>1679660469907</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
