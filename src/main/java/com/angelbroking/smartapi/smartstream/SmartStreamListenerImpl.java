@@ -4,20 +4,13 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-import com.angelbroking.smartapi.http.SmartAPIRequestHandler;
 import com.angelbroking.smartapi.smartstream.models.LTP;
 import com.angelbroking.smartapi.smartstream.models.Quote;
 import com.angelbroking.smartapi.smartstream.models.SmartStreamError;
 import com.angelbroking.smartapi.smartstream.models.SnapQuote;
 import com.angelbroking.smartapi.smartstream.ticker.SmartStreamListener;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public class SmartStreamListenerImplTest implements SmartStreamListener {
-
-	private static final Logger logger = LoggerFactory.getLogger(SmartStreamListenerImplTest.class);
-
-
+public class SmartStreamListenerImpl implements SmartStreamListener {
 	public static final ZoneId TZ_UTC = ZoneId.of("UTC");
 	public static final ZoneId TZ_IST = ZoneId.of("Asia/Kolkata");
 
@@ -34,7 +27,7 @@ public class SmartStreamListenerImplTest implements SmartStreamListener {
 				(ltp.getLastTradedPrice() / 100.0),
 				exchangeTime,
 				Instant.now().toEpochMilli() - ltp.getExchangeFeedTimeEpochMillis());
-		logger.info(ltpData);
+		System.out.println(ltpData);
 	}
 
 	@Override
@@ -58,7 +51,7 @@ public class SmartStreamListenerImplTest implements SmartStreamListener {
 				(quote.getClosePrice() / 100.0),
 				exchangeTime,
 				Instant.now().toEpochMilli() - quote.getExchangeFeedTimeEpochMillis());
-		logger.info(quoteData);
+		System.out.println(quoteData);
 	}
 
 	@Override
@@ -82,12 +75,12 @@ public class SmartStreamListenerImplTest implements SmartStreamListener {
 				(snapQuote.getClosePrice() / 100.0),
 				exchangeTime,
 				Instant.now().toEpochMilli() - snapQuote.getExchangeFeedTimeEpochMillis());
-		logger.info(snapQuoteData);
+		System.out.println(snapQuoteData);
 	}
 
 	@Override
 	public void onConnected() {
-		logger.info("web socket connected");
+		System.out.println("web socket connected");
 
 	}
 
@@ -98,6 +91,6 @@ public class SmartStreamListenerImplTest implements SmartStreamListener {
 
 	@Override
 	public void onPong() {
-		logger.info("pong received");
+		System.out.println("pong received");
 	}
 }

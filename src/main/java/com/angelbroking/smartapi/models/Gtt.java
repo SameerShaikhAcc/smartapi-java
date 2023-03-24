@@ -2,7 +2,6 @@ package com.angelbroking.smartapi.models;
 
 import com.google.gson.annotations.SerializedName;
 
-
 public class Gtt {
 	@SerializedName("id")
 	public Integer id;

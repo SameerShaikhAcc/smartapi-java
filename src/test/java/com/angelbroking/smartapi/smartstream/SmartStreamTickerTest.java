@@ -39,7 +39,7 @@ public class SmartStreamTickerTest {
 	@Test
 	void testSmartStreamTicketLTP() throws WebSocketException, InterruptedException {
 		try {
-			SmartStreamTicker ticker = new SmartStreamTicker(clientID, feedToken, new SmartStreamListenerImplTest());
+			SmartStreamTicker ticker = new SmartStreamTicker(clientID, feedToken, new SmartStreamListenerImpl());
 			ticker.connect();
 			ticker.subscribe(SmartStreamSubsMode.QUOTE, getTokens());
 			Thread.currentThread().join();

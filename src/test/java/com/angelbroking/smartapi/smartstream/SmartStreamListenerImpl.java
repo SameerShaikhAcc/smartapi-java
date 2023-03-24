@@ -4,19 +4,14 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-import com.angelbroking.smartapi.sample.Test;
 import com.angelbroking.smartapi.smartstream.models.LTP;
 import com.angelbroking.smartapi.smartstream.models.Quote;
 import com.angelbroking.smartapi.smartstream.models.SmartStreamError;
 import com.angelbroking.smartapi.smartstream.models.SnapQuote;
 import com.angelbroking.smartapi.smartstream.ticker.SmartStreamListener;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class SmartStreamListenerImpl implements SmartStreamListener {
-
-	private static final Logger logger = LoggerFactory.getLogger(SmartStreamListenerImpl.class);
-
+	
 	public static final ZoneId TZ_UTC = ZoneId.of("UTC");
 	public static final ZoneId TZ_IST = ZoneId.of("Asia/Kolkata");
 
@@ -33,7 +28,7 @@ public class SmartStreamListenerImpl implements SmartStreamListener {
 				(ltp.getLastTradedPrice() / 100.0),
 				exchangeTime,
 				Instant.now().toEpochMilli() - ltp.getExchangeFeedTimeEpochMillis());
-		logger.info(ltpData);
+		System.out.println(ltpData);
 	}
 
 	@Override
@@ -57,7 +52,7 @@ public class SmartStreamListenerImpl implements SmartStreamListener {
 				(quote.getClosePrice() / 100.0),
 				exchangeTime,
 				Instant.now().toEpochMilli() - quote.getExchangeFeedTimeEpochMillis());
-		logger.info(data);
+		System.out.println(data);
 	}
 
 	@Override
@@ -79,7 +74,7 @@ public class SmartStreamListenerImpl implements SmartStreamListener {
 
 	@Override
 	public void onPong() {
-		logger.info("pong received");
+		System.out.println("pong received");
 	}
 
 }

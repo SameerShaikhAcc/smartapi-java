@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.angelbroking.smartapi.http.SmartAPIRequestHandler;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -24,17 +23,13 @@ import com.angelbroking.smartapi.ticker.OnConnect;
 import com.angelbroking.smartapi.ticker.OnTicks;
 import com.angelbroking.smartapi.ticker.SmartAPITicker;
 import com.angelbroking.smartapi.utils.Constants;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @SuppressWarnings("unused")
 public class Examples {
 
-	private static final Logger logger = LoggerFactory.getLogger(SmartAPIRequestHandler.class);
-
 	public void getProfile(SmartConnect smartConnect) throws IOException, SmartAPIException {
 		User profile = smartConnect.getProfile();
-		logger.info(profile.toString());
+		System.out.println(profile.toString());
 	}
 
 	/** CONSTANT Details */
@@ -103,7 +98,7 @@ public class Examples {
 		orderParams.triggerprice = "209";
 
 		Order order = smartConnect.placeOrder(orderParams, "STOPLOSS");
-		logger.info(String.valueOf(order));
+		System.out.print(order);
 	}
 
 	/** Modify order. */
@@ -135,9 +130,9 @@ public class Examples {
 	/** Get order details */
 	public void getOrder(SmartConnect smartConnect) throws SmartAPIException, IOException {
 		JSONObject orders = smartConnect.getOrderHistory(smartConnect.getUserId());
-		logger.info(String.valueOf(orders));
+		System.out.print(orders);
 //		for (int i = 0; i < orders.size(); i++) {
-//			logger.info(orders.get(i).orderId + " " + orders.get(i).status);
+//			System.out.println(orders.get(i).orderId + " " + orders.get(i).status);
 //		}
 	}
 

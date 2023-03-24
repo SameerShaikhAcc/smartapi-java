@@ -1,14 +1,12 @@
 package com.angelbroking.smartapi.utils;
 
-
-
 /**
  * Contains all the Strings that are being used in the Smart API Connect library.
  */
 public class Constants {
-
+	
 	private Constants() {
-
+		
 	}
 
     /** Product types. */
@@ -29,7 +27,7 @@ public class Constants {
     public static final String VARIETY_AMO = "AMO";
     public static final String VARIETY_STOPLOSS = "STOPLOSS";
     public static final String VARIETY_ROBO = "ROBO";
-
+    
     /** Transaction types. */
     public static final String TRANSACTION_TYPE_BUY = "BUY";
     public static final String TRANSACTION_TYPE_SELL = "SELL";
@@ -45,14 +43,5 @@ public class Constants {
     public static final String EXCHANGE_CDS = "CDS";
     public static final String EXCHANGE_NCDEX = "NCDEX";
     public static final String EXCHANGE_MCX = "MCX";
-
-
-    /** SmartStream Routes */
-    public static final String ROOT_URL  = "https://apiconnect.angelbroking.com";
-    public static final String LOGIN_URL  = "https://apiconnect.angelbroking.com/rest/auth/angelbroking/user/v1/loginByPassword";
-    public static final String WSURI  = "wss://wsfeeds.angelbroking.com/NestHtml5Mobile/socket/stream";
-    public static final String SMARTSTREAM_WSURI  = "ws://smartapisocket.angelone.in/smart-stream";
-    public static final String SWSURI  = "wss://smartapisocket.angelbroking.com/websocket";
-
 
 }

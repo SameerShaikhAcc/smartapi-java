@@ -1,44 +1,52 @@
 package com.angelbroking.smartapi.utils;
 
-import java.util.Arrays;
-
 public class Utils {
-    private Utils() {
+	private Utils() {
+		
+	}
 
-    }
+	public static boolean isEmpty(final CharSequence cs) {
+		return cs == null || cs.length() == 0;
+	}
 
-    public static boolean isEmpty(final CharSequence cs) {
-        return cs == null || cs.length() == 0;
-    }
+	public static boolean isNotEmpty(final CharSequence cs) {
+		return !isEmpty(cs);
+	}
 
-    public static boolean isNotEmpty(final CharSequence cs) {
-        return !isEmpty(cs);
-    }
+	public static boolean areCharArraysEqual(char[] a, char[] b) {
+		if (a == null && b == null) {
+			return true;
+		}
 
-    public static boolean areCharArraysEqual(char[] array1, char[] array2) {
-        if (array1 == null && array2 == null) {
-            return true;
-        }
+		if (a != null && b != null) {
+			if (a.length == b.length) {
+				for (int i = 0; i < a.length; i++) {
+					if (a[i] != b[i]) {
+						return false;
+					}
+				}
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static boolean areByteArraysEqual(byte[] a, byte[] b) {
+		if (a == null && b == null) {
+			return true;
+		}
 
-        if (array1 != null && array2 != null) {
-            return Arrays.equals(array1, array2);
-        }
-
-        return false;
-    }
-
-
-    public static boolean areByteArraysEqual(byte[] array1, byte[] array2) {
-        if (array1 == null && array2 == null) {
-            return true;
-        }
-
-        if (array1 != null && array2 != null) {
-            return Arrays.equals(array1, array2);
-        }
-
-        return false;
-    }
-
+		if (a != null && b != null) {
+			if (a.length == b.length) {
+				for (int i = 0; i < a.length; i++) {
+					if (a[i] != b[i]) {
+						return false;
+					}
+				}
+				return true;
+			}
+		}
+		return false;
+	}
 
 }

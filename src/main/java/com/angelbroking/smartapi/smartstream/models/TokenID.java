@@ -1,8 +1,5 @@
 package com.angelbroking.smartapi.smartstream.models;
 
-import lombok.Data;
-
-@Data
 public class TokenID {
 
 	private ExchangeType exchangeType;
@@ -16,7 +13,13 @@ public class TokenID {
 		this.token = token;
 	}
 
+	public ExchangeType getExchangeType() {
+		return exchangeType;
+	}
 
+	public String getToken() {
+		return token;
+	}
 
 	@Override
 	public boolean equals(Object obj) {

@@ -31,7 +31,7 @@ Smart API is a set of REST-like APIs that expose many capabilities required to b
 	smartConnect.setSessionExpiryHook(new SessionExpiryHook() {
 	@Override
 	public void sessionExpired() {
-		logger.info("session expired");
+		System.out.println("session expired");
 	}
 	});
 	
@@ -126,7 +126,8 @@ Smart API is a set of REST-like APIs that expose many capabilities required to b
 		String orderId = "201216000755110";
 		Order order = smartConnect.modifyOrder(orderId, orderParams, Constants.VARIETY_REGULAR);
 	}
-    
+
+	/** Cancel an order */
 	public void cancelOrder(SmartConnect smartConnect) throws SmartAPIException, IOException {
 		// Order modify request will return order model which will contain only
 		// order_id.
@@ -135,21 +136,18 @@ Smart API is a set of REST-like APIs that expose many capabilities required to b
 	}
 
 	/** Get order details */
-    public void getOrder(SmartConnect smartConnect) throws SmartAPIException, IOException {
-        List<Order> orders = smartConnect.getOrderHistory(smartConnect.getUserId());
-        Iterator<Order> orderIterator = orders.iterator();
-        while (orderIterator.hasNext()) {
-            Order order = orderIterator.next();
-            logger.info(order.orderId + " " + order.status);
-        }
-    }
+	public void getOrder(SmartConnect smartConnect) throws SmartAPIException, IOException {
+		List<Order> orders = smartConnect.getOrderHistory(smartConnect.getUserId());
+		for (int i = 0; i < orders.size(); i++) {
+			System.out.println(orders.get(i).orderId + " " + orders.get(i).status);
+		}
+	}
 
-
-    /**
-     * Get last price for multiple instruments at once. USers can either pass
-     * exchange with tradingsymbol or instrument token only. For example {NSE:NIFTY
-     * 50, BSE:SENSEX} or {256265, 265}
-     */
+	/**
+	 * Get last price for multiple instruments at once. USers can either pass
+	 * exchange with tradingsymbol or instrument token only. For example {NSE:NIFTY
+	 * 50, BSE:SENSEX} or {256265, 265}
+	 */
 	public void getLTP(SmartConnect smartConnect) throws SmartAPIException, IOException {
 		String exchange = "NSE";
 		String tradingSymbol = "SBIN-EQ";
@@ -158,19 +156,17 @@ Smart API is a set of REST-like APIs that expose many capabilities required to b
 	}
 
 	/** Get tradebook */
-    public void getTrades(SmartConnect smartConnect) throws SmartAPIException, IOException {
-            // Returns tradebook.
-            List<Trade> trades = smartConnect.getTrades();
-            Iterator<Trade> iterator = trades.iterator();
-            while (iterator.hasNext()) {
-            Trade trade = iterator.next();
-            logger.info(trade.tradingSymbol + " " + trades.size());
-            }
-            }
+	public void getTrades(SmartConnect smartConnect) throws SmartAPIException, IOException {
+		// Returns tradebook.
+		List<Trade> trades = smartConnect.getTrades();
+		for (int i = 0; i < trades.size(); i++) {
+			System.out.println(trades.get(i).tradingSymbol + " " + trades.size());
+		}
+	}
 
-
-    /** Get RMS */
+	/** Get RMS */
 	public void getRMS(SmartConnect smartConnect) throws SmartAPIException, IOException {
+		// Returns RMS.
 		JSONObject response = smartConnect.getRMS();
 	}
 
@@ -188,8 +184,8 @@ Smart API is a set of REST-like APIs that expose many capabilities required to b
 
 	/** convert Position */
 	public void convertPosition(SmartConnect smartConnect) throws SmartAPIException, IOException {
-		
-        JSONObject requestObejct = new JSONObject();
+
+		JSONObject requestObejct = new JSONObject();
 		requestObejct.put("exchange", "NSE");
 		requestObejct.put("oldproducttype", "DELIVERY");
 		requestObejct.put("newproducttype", "MARGIN");
@@ -204,7 +200,7 @@ Smart API is a set of REST-like APIs that expose many capabilities required to b
 	/** Create Gtt Rule*/
 	public void createRule(SmartConnect smartConnect)throws SmartAPIException,IOException{
 		GttParams gttParams= new GttParams();
-
+		
 		gttParams.tradingsymbol="SBIN-EQ";
 		gttParams.symboltoken="3045";
 		gttParams.exchange="NSE";

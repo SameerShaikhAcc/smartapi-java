@@ -1,37 +1,27 @@
 package com.angelbroking.smartapi.sample;
 
-import java.lang.invoke.MethodHandles;
 import java.util.HashSet;
 import java.util.Set;
+
 import com.angelbroking.smartapi.SmartConnect;
 import com.angelbroking.smartapi.http.exceptions.SmartAPIException;
-import com.angelbroking.smartapi.models.TokenSet;
 import com.angelbroking.smartapi.models.User;
-import com.angelbroking.smartapi.smartstream.SmartStreamListenerImplTest;
+import com.angelbroking.smartapi.smartstream.SmartStreamListenerImpl;
 import com.angelbroking.smartapi.smartstream.models.ExchangeType;
 import com.angelbroking.smartapi.smartstream.models.SmartStreamSubsMode;
 import com.angelbroking.smartapi.smartstream.models.TokenID;
 import com.angelbroking.smartapi.smartstream.ticker.SmartStreamTicker;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class Test {
-	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass().getSimpleName());
+
 	public static void main(String[] args) throws SmartAPIException {
 		try {
 
-
 			// Initialize SmartAPI
-//			String apiKey = "<apiKey>"; // PROVIDE YOUR API KEY HERE
-//			String clientId = "<clientId>"; // PROVIDE YOUR Client ID HERE
-//			String clientPin = "<clientPin>"; // PROVIDE YOUR Client PIN HERE
-//			String tOTP = "<tOTP>"; // PROVIDE THE CODE DISPLAYED ON YOUR AUTHENTICATOR APP - https://smartapi.angelbroking.com/enable-totp
-
-
-			String apiKey = "zkWvUuLx"; // PROVIDE YOUR API KEY HERE
-			String clientId = "D541276"; // PROVIDE YOUR Client ID HERE
-			String clientPin = "1501"; // PROVIDE YOUR Client PIN HERE
-			String tOTP = "647117"; // PROVIDE THE CODE DISPLAYED ON YOUR AUTHENTICATOR APP - https://smartapi.angelbroking.com/enable-totp
+			String apiKey = "<apiKey>"; // PROVIDE YOUR API KEY HERE
+			String clientId = "<clientId>"; // PROVIDE YOUR Client ID HERE
+			String clientPin = "<clientPin>"; // PROVIDE YOUR Client PIN HERE
+			String tOTP = "<tOTP>"; // PROVIDE THE CODE DISPLAYED ON YOUR AUTHENTICATOR APP - https://smartapi.angelbroking.com/enable-totp
 
 			SmartConnect smartConnect = new SmartConnect(apiKey);
 
@@ -45,7 +35,7 @@ public class Test {
 			 * smartConnect.setSessionExpiryHook(new SessionExpiryHook() {
 			 * @Override 
 			 * public void sessionExpired() {
-			 * logger.info("session expired"); 
+			 * System.out.println("session expired"); 
 			 * } 
 			 * });
 			 */
@@ -57,74 +47,77 @@ public class Test {
 			
 			// SmartStreamTicker
 			String feedToken = user.getFeedToken();
-			SmartStreamTicker ticker = new SmartStreamTicker(clientId, feedToken, new SmartStreamListenerImplTest());
+			SmartStreamTicker ticker = new SmartStreamTicker(clientId, feedToken, new SmartStreamListenerImpl());
 			ticker.connect();
 			ticker.subscribe(SmartStreamSubsMode.QUOTE, getTokens());
-//			Thread.currentThread().join();
+			Thread.currentThread().join();
 
-			logger.info("DONE");
 			// token re-generate
-			  TokenSet tokenSet = smartConnect.renewAccessToken(user.getAccessToken(),
-			  user.getRefreshToken());
-			  smartConnect.setAccessToken(tokenSet.getAccessToken());
+			/*
+			 * TokenSet tokenSet = smartConnect.renewAccessToken(user.getAccessToken(),
+			 * user.getRefreshToken());
+			 * smartConnect.setAccessToken(tokenSet.getAccessToken());
+			 */
 
-			  Examples examples = new Examples();
-			  logger.info("getProfile");
-			  examples.getProfile(smartConnect);
-
-			  logger.info("placeOrder");
-			  examples.placeOrder(smartConnect);
-
-			  logger.info("modifyOrder");
-			  examples.modifyOrder(smartConnect);
-
-			  logger.info("cancelOrder");
-			  examples.cancelOrder(smartConnect);
-
-			  logger.info("getOrder");
-			  examples.getOrder(smartConnect);
-
-			  logger.info("getLTP");
-			  examples.getLTP(smartConnect);
-
-			  logger.info("getTrades");
-			  examples.getTrades(smartConnect);
-
-			  logger.info("getRMS");
-			  examples.getRMS(smartConnect);
-
-			  logger.info("getHolding");
-			  examples.getHolding(smartConnect);
-
-			  logger.info("getPosition");
-			  examples.getPosition(smartConnect);
-
-			  logger.info("convertPosition");
-			  examples.convertPosition(smartConnect);
-
-			  logger.info("createRule");
-			  examples.createRule(smartConnect);
-
-			  logger.info("ModifyRule");
-			  examples.modifyRule(smartConnect);
-
-			  logger.info("cancelRule");
-			  examples.cancelRule(smartConnect);
-
-			  logger.info("Rule Details");
-			  examples.ruleDetails(smartConnect);
-
-			  logger.info("Rule List");
-			  examples.ruleList(smartConnect);
-
-			  logger.info("Historic candle Data");
-			  examples.getCandleData(smartConnect);
-
-			  logger.info("logout");
-			  examples.logout(smartConnect);
+			/*
+			 * Examples examples = new Examples(); 
+			 * System.out.println("getProfile");
+			 * examples.getProfile(smartConnect);
+			 * 
+			 * System.out.println("placeOrder"); 
+			 * examples.placeOrder(smartConnect);
+			 * 
+			 * System.out.println("modifyOrder"); 
+			 * examples.modifyOrder(smartConnect);
+			 * 
+			 * System.out.println("cancelOrder"); 
+			 * examples.cancelOrder(smartConnect);
+			 * 
+			 * System.out.println("getOrder"); 
+			 * examples.getOrder(smartConnect);
+			 * 
+			 * System.out.println("getLTP"); 
+			 * examples.getLTP(smartConnect);
+			 * 
+			 * System.out.println("getTrades"); 
+			 * examples.getTrades(smartConnect);
+			 * 
+			 * System.out.println("getRMS"); 
+			 * examples.getRMS(smartConnect);
+			 * 
+			 * System.out.println("getHolding"); 
+			 * examples.getHolding(smartConnect);
+			 * 
+			 * System.out.println("getPosition"); 
+			 * examples.getPosition(smartConnect);
+			 * 
+			 * System.out.println("convertPosition");
+			 * examples.convertPosition(smartConnect);
+			 * 
+			 * System.out.println("createRule"); 
+			 * examples.createRule(smartConnect);
+			 * 
+			 * System.out.println("ModifyRule"); 
+			 * examples.modifyRule(smartConnect);
+			 * 
+			 * System.out.println("cancelRule"); 
+			 * examples.cancelRule(smartConnect);
+			 * 
+			 * System.out.println("Rule Details"); 
+			 * examples.ruleDetails(smartConnect);
+			 * 
+			 * System.out.println("Rule List"); 
+			 * examples.ruleList(smartConnect);
+			 * 
+			 * System.out.println("Historic candle Data");
+			 * examples.getCandleData(smartConnect);
+			 *
+			 * System.out.println("logout"); 
+			 * examples.logout(smartConnect);
+			 */
 
 		} catch (Exception e) {
-			logger.info("Exception: " + e.getMessage());
+			System.out.println("Exception: " + e.getMessage());
 			e.printStackTrace();
 		}
 

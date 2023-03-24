@@ -113,33 +113,7 @@
             <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
-
-		<!--Used in Logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.7.25</version>
-		</dependency>
-
-		<!--impl for Logging -->
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.2.3</version>
-		</dependency>
-
-
-		<!-- used for generating getters and setters -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.26</version>
-			<scope>provided</scope>
-		</dependency>
-
-
-
-
+        
 	</dependencies>
 
 </project>

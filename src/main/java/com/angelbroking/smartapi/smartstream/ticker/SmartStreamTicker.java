@@ -28,13 +28,8 @@ import com.neovisionaries.ws.client.WebSocketAdapter;
 import com.neovisionaries.ws.client.WebSocketException;
 import com.neovisionaries.ws.client.WebSocketFactory;
 import com.neovisionaries.ws.client.WebSocketFrame;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class SmartStreamTicker {
-
-	private static final Logger logger = LoggerFactory.getLogger(SmartStreamTicker.class);
-
 
 	private static final int PING_INTERVAL = 10000; // 10 seconds
 	private static final String CLIENT_ID_HEADER = "x-client-code";
@@ -112,19 +107,19 @@ public class SmartStreamTicker {
 					switch (mode) {
 					case LTP: {
 						ByteBuffer packet = ByteBuffer.wrap(binary).order(ByteOrder.LITTLE_ENDIAN);
-						LTP ltp = ByteUtils.mapByteBufferToLTP(packet);
+						LTP ltp = ByteUtils.mapToLTP(packet);
 						smartStreamListener.onLTPArrival(ltp);
 						break;
 					}
 					case QUOTE: {
 						ByteBuffer packet = ByteBuffer.wrap(binary).order(ByteOrder.LITTLE_ENDIAN);
-						Quote quote = ByteUtils.mapByteBufferToQuote(packet);
+						Quote quote = ByteUtils.mapToQuote(packet);
 						smartStreamListener.onQuoteArrival(quote);
 						break;
 					}
 					case SNAP_QUOTE: {
 						ByteBuffer packet = ByteBuffer.wrap(binary).order(ByteOrder.LITTLE_ENDIAN);
-						SnapQuote snapQuote = ByteUtils.mapByteBufferToSnapQuote(packet);
+						SnapQuote snapQuote = ByteUtils.mapToSnapQuote(packet);
 						smartStreamListener.onSnapQuoteArrival(snapQuote);
 						break;
 					}
@@ -306,7 +301,7 @@ public class SmartStreamTicker {
 
 	public void connect() throws WebSocketException {
 		ws.connect();
-		logger.info("connected to uri: "+ wsuri);
+		System.out.println("connected to uri: "+ wsuri);
 	}
 
 }
